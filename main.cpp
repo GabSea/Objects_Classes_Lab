@@ -42,6 +42,7 @@ void run_menu() {
                 erase_bank_account();
                 break;
             case 3:
+                edit_bank_account();
                 break;
             case 4:
                 for (int i = 0; i < bank_accounts.size(); i++) {
@@ -76,7 +77,7 @@ int main_menu() {
 int sub_menu(int choice) {
     int sub_choice = -1;
     std::cout << "------------Account Menu-----------\n"
-                 "Editing" << bank_accounts.at(choice).getAccountHolderName() << "'s Account..." << std::endl;
+                 "Editing " << bank_accounts.at(choice).getAccountHolderName() << "'s Account..." << std::endl;
     std::cout << "Enter an input to choose what to do:\n"
                  "- 1. Deposit\n"
                  "- 2. Withdraw\n"
