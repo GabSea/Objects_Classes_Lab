@@ -163,28 +163,29 @@ void edit_bank_account() {
     while (choice != -1) {
 
         choice = sub_menu(editing);
+        double deposit;
+        double withdraw;
+        std::string n;
 
         switch (choice) {
             case 1:
-                double deposit;
                 std::cout << "Enter deposit amnt: " << std::endl;
                 std::cin >> deposit;
                 bank_accounts[editing].deposit(deposit);
                 break;
             case 2:
-                double withdraw;
                 std::cout << "Enter withdraw amnt: " << std::endl;
                 std::cin >> withdraw;
                 bank_accounts[editing].withdraw(withdraw);
                 break;
             case 3:
-                std::string n;
                 std::cout << "Enter new name: " << std::endl;
                 std::cin >> n;
                 bank_accounts[editing].setAccountHolderName(n);
                 break;
             case 4:
                 bank_accounts[editing].print_details();
+                break;
             case -1:
                 std::cout << "Exiting..." << std::endl;
                 break;
